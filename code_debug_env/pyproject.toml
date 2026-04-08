@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "code-debug-env"
+version = "0.1.0"
+description = "An OpenEnv environment for debugging Python code"
+requires-python = ">=3.10"
+dependencies = [
+    "openenv-core",
+    "pydantic>=2.0",
+    "fastapi>=0.100",
+    "uvicorn[standard]>=0.20",
+]
+
+[tool.setuptools.packages.find]
+include = ["code_debug_env*"]
